@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            type="com.example.moviesapp.Favorites"
+            name="fav" />
+
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#424242"
+        app:cardElevation="8dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitStart"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded"
+            bind:posterPath="@{fav.posterPath}"/>
+<!--
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{fav.originalTitle}"
+                        android:layout_marginTop="80dp"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>-->
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="bottom|center"
+            android:src="@drawable/star"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom|center"
+            android:text="@{fav.voteAverage.toString()}"/>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</layout>
