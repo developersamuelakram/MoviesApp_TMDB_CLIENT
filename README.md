@@ -1,8 +1,9 @@
 # MoviesApp
-MoviesApp built with MVVM + Retrofit + Offline Functinality
+MoviesApp built with MVVM + Retrofit + Dagger2 + Offline Functinality
 
 Get your API KEY FROM TMDB's website. 
 This App includes:
+* Dagger2
 * Swipe Refresh
 * Databinding
 * RoomDatabase
